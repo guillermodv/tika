@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'tika'
+version = '1.0-SNAPSHOT'
+
+description = """tika"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+     maven { url "https://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.apache.tika', name: 'tika-core', version:'1.10'
+    compile group: 'org.apache.tika', name: 'tika-parsers', version:'1.13'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version:'2.9.6'
+    testCompile group: 'junit', name: 'junit', version:'3.8.1'
+}
